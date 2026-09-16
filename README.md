@@ -22,12 +22,17 @@ pixi run docs-serve
 
 ```bash
 pixi run docs-build
+```
+
+`docs-build` produces a static site in `site/` (untracked).
+
+```bash
 pixi run docs-check
 ```
 
-- `docs-build` produces a static site in `site/` (untracked).
-- `docs-check` runs prose style (Vale), spelling (typos), and link
-  (lychee) checks, then performs a clean build.
+`docs-check` runs prose style (Vale), spelling (typos), and link
+(lychee) checks, then performs a clean build. Run this before opening
+a pull request; running `docs-build` separately first is not required.
 
 ## Repository layout
 

@@ -7,7 +7,6 @@
 <!-- Which checks did you run locally? -->
 
 - [ ] `pixi run docs-check`
-- [ ] `pixi run docs-build`
 
 ## Publication
 

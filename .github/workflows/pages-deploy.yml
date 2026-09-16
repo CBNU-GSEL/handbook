@@ -1,4 +1,4 @@
-name: Deploy
+name: pages-deploy
 
 on:
   push:
@@ -13,8 +13,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build site
+  site-build:
+    name: site-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +24,8 @@ jobs:
         uses: prefix-dev/setup-pixi@d3f436a425481402e6a95a1d1fc10331c708cd9e # v0.10.2
         with:
           locked: true
-          cache: false
+          cache: true
+          cache-write: true
 
       - name: Build site
         run: pixi run docs-build
@@ -34,9 +35,9 @@ jobs:
         with:
           path: site
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
+  pages-deploy:
+    name: pages-deploy
+    needs: site-build
     runs-on: ubuntu-latest
     permissions:
       pages: write
