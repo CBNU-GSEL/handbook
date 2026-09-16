@@ -1,0 +1,2 @@
+[files]
+extend-exclude = ["site/", ".pixi/", "pixi.lock", ".vale/styles/config/"]

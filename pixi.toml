@@ -1,0 +1,23 @@
+[workspace]
+authors = ["Jun-Hyeok, Choe <63895078+junhyeok-choe@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "handbook"
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+version = "0.1.0"
+
+[dependencies]
+zensical = ">=0.0.61,<0.0.62"
+vale = ">=3.21.0,<4"
+typos = ">=1.50.1,<2"
+lychee = ">=0.24.2,<0.25"
+
+[tasks]
+docs-serve = "zensical serve"
+docs-build = "zensical build --clean"
+
+vale-check = "vale docs"
+typos-check = "typos ."
+links-check = "lychee --config lychee.toml docs README.md CONTRIBUTING.md"
+
+[tasks.docs-check]
+depends-on = ["vale-check", "typos-check", "links-check", "docs-build"]

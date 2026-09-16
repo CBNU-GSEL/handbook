@@ -1,0 +1,9 @@
+# Generated site output
+/site/
+/.cache/
+
+# Pixi local environment
+.pixi/
+
+# Editor/OS cruft
+.DS_Store
