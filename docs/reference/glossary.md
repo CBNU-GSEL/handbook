@@ -12,14 +12,15 @@ icon: lucide/book-open
 browser, the Coder CLI, or SSH.
 
 **GSEL Compute**
-: The GSEL service that runs research computing workloads on the cluster.
+: A GSEL service for research computing workloads. Not yet available for
+user access.
 
 **Kubernetes**
-: The cluster orchestration platform underlying Coder and GSEL Compute.
+: The cluster orchestration platform underlying Coder.
 
 **Shared research storage**
-: A storage area available from Coder workspaces for shared datasets and
-results.
+: Read-only access to shared research datasets from approved Coder
+workspaces.
 
 **Template**
 : A predefined workspace configuration in Coder. GSEL currently approves one

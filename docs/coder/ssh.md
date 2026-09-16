@@ -5,8 +5,9 @@ icon: lucide/plug
 # Connect with SSH
 
 `coder config-ssh` configures your standard SSH client to reach your Coder
-workspaces, so you can use `ssh`, `scp`, or an editor's remote-SSH feature
-directly, without the `coder` CLI in the loop.
+workspaces. You can then use `ssh`, `scp`, or an editor's remote-SSH
+feature, but the connection is routed through the installed and
+authenticated `coder` CLI — it stays in the connection path, not outside it.
 
 ## Prerequisites
 
@@ -28,12 +29,16 @@ writing them.
 coder config-ssh
 ```
 
-This adds a host entry for each of your workspaces to your local SSH
-configuration. Once configured, connect with a standard SSH client using the
-host name it printed, for example:
+By default, this adds a single wildcard host entry that covers all of your
+workspaces, including ones you create later — you do not need to rerun the
+command for each new workspace. Connect with a standard SSH client using the
+workspace host name, for example:
 
 ```bash
 ssh <workspace-host>
 ```
 
-Re-run `coder config-ssh` after creating a new workspace to add its entry.
+Use `coder config-ssh --no-wildcard` to write a separate host entry per
+workspace instead. This suits SSH clients or tools that enumerate
+configured hosts rather than matching a wildcard pattern; rerun the command
+after creating a workspace to add its entry.

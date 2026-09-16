@@ -12,7 +12,6 @@ network addresses, and other operational detail.
 graph LR
   Researcher --> Coder
   Coder --> Kubernetes
-  GSELCompute["GSEL Compute"] --> Kubernetes
   Kubernetes --> Storage["Shared research storage"]
 ```
 
@@ -23,11 +22,11 @@ graph LR
   sign-in](../onboarding/gsel-sign-in.md)).
 - **Coder** — provisions browser- and SSH-accessible development workspaces
   for interactive work. See the [Coder](../coder/create-workspace.md) pages.
-- **GSEL Compute** — runs research computing workloads on the cluster. It
-  does not yet have a self-service job submission path; use a Coder
-  workspace for interactive work in the meantime.
 - **Kubernetes** — the cluster orchestration platform that runs Coder
-  workspaces and GSEL Compute workloads.
-- **Shared research storage** — a storage area available from Coder
-  workspaces for shared datasets and results, separate from your private
+  workspaces.
+- **Shared research storage** — read-only access to shared research
+  datasets from approved Coder workspaces, separate from your private
   workspace storage.
+- **GSEL Compute** — a GSEL service for research computing workloads. Not
+  yet available for user access; use a Coder workspace for interactive work
+  in the meantime.
