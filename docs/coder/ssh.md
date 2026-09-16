@@ -6,8 +6,8 @@ icon: lucide/plug
 
 `coder config-ssh` configures your standard SSH client to reach your Coder
 workspaces. You can then use `ssh`, `scp`, or an editor's remote-SSH
-feature, but the connection is routed through the installed and
-authenticated `coder` CLI — it stays in the connection path, not outside it.
+feature. Standard SSH clients connect through the generated `ProxyCommand`,
+which invokes your installed and authenticated Coder CLI.
 
 ## Prerequisites
 
