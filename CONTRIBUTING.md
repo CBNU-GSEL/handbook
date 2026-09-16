@@ -1,7 +1,9 @@
 # Contributing
 
 This repository is public. Review the following before opening a pull
-request.
+request. Follow the organization
+[writing policy](https://github.com/CBNU-GSEL/.github/blob/main/CONTRIBUTING.md#writing-policy)
+for comments, docstrings, commits, and PR descriptions.
 
 ## Language
 

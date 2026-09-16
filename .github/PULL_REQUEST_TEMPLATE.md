@@ -1,17 +1,14 @@
-## Scope
+## Summary
 
-<!-- What does this PR change, and why? -->
+<!-- What changed and why; linked issues and closure status. -->
 
 ## Validation
 
-<!-- Which checks did you run locally? -->
-
 - [ ] `pixi run docs-check`
+- [ ] Public content contains no private repository material, internal URLs,
+      infrastructure identifiers, topology, or operator-only instructions.
+- [ ] Content follows [CONTRIBUTING.md](https://github.com/CBNU-GSEL/handbook/blob/main/CONTRIBUTING.md).
 
-## Publication
+## Dependency / Deployment
 
-<!-- Confirm this PR is safe to publish on a public site. -->
-
-- [ ] No private repository content, internal URLs, node names, hardware
-      details, Kubernetes topology, or operator instructions are included.
-- [ ] Content follows [CONTRIBUTING.md](../CONTRIBUTING.md).
+<!-- Remove this section when inapplicable. Otherwise list dependencies or publication steps. -->
