@@ -1,7 +1,7 @@
 [project]
 site_url = "https://cbnu-gsel.github.io/handbook/"
 site_name = "GSEL Handbook"
-site_description = "Documentation for the CBNU GSEL research group: onboarding, workspaces, compute, and policies."
+site_description = "Public user documentation for GSEL research computing."
 
 repo_url = "https://github.com/CBNU-GSEL/handbook"
 repo_name = "CBNU-GSEL/handbook"
@@ -9,13 +9,6 @@ edit_uri = "edit/main/docs/"
 
 nav = [
   { "Start Here" = "index.md" },
-  { "Onboarding" = "onboarding/index.md" },
-  { "Workspaces" = "workspaces/index.md" },
-  { "Compute" = "compute/index.md" },
-  { "Project Templates" = "project-templates/index.md" },
-  { "Policies" = "policies/index.md" },
-  { "Troubleshooting" = "troubleshooting/index.md" },
-  { "Reference" = "reference/index.md" },
 ]
 
 [project.theme]

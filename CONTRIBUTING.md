@@ -1,7 +1,7 @@
 # Contributing
 
-Thanks for improving the GSEL Handbook. This repository is public, so keep
-the following in mind before opening a pull request.
+This repository is public. Review the following before opening a pull
+request.
 
 ## Language
 
@@ -30,14 +30,17 @@ If a page needs to reference internal systems, describe the concept at a
 level safe for a public audience and point readers to the appropriate
 internal or private documentation instead of duplicating it here.
 
-## Comments and prose
+## Style
 
-- Write prose for readers, not for a future editor: avoid comments-in-prose
-  like "TODO" or "fix me" in published pages.
-- Use [Mermaid](https://zensical.org/docs/authoring/diagrams/) for diagrams
-  instead of images where practical, since diagrams stay text-diffable.
+- Do not include editor comments such as "TODO" or "fix me" in published
+  pages.
 - Keep formatting close to Zensical defaults; avoid custom CSS, JavaScript,
   or animation.
+
+## Diagrams
+
+Use [Mermaid](https://zensical.org/docs/authoring/diagrams/) for diagrams
+instead of images; Mermaid diagrams stay text-diffable.
 
 ## Before opening a pull request
 

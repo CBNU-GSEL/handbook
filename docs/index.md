@@ -2,16 +2,9 @@
 icon: lucide/rocket
 ---
 
-# Start Here
+# GSEL Handbook
 
-Welcome to the GSEL Handbook, the documentation site for the CBNU GSEL
-research group.
+The GSEL Handbook documents research computing practices for the CBNU GSEL
+research group: shared workspaces, compute resources, and related tooling.
 
-This handbook covers onboarding, shared workspaces, compute access, project
-templates, policies, and troubleshooting. Use the navigation to find the
-section you need.
-
-!!! note "This handbook is under construction"
-
-    The navigation shell is in place, but most sections do not yet have
-    content. Pages will be filled in as part of follow-up work.
+This site contains public user documentation for GSEL research computing.
