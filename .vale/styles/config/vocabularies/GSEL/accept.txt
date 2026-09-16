@@ -7,3 +7,5 @@ lychee
 Gitleaks
 Vale
 [Oo]nboarding
+Authentik
+Coder
