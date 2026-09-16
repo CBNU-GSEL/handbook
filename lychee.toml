@@ -1,0 +1,9 @@
+max_concurrency = 8
+timeout = 20
+retry_wait_time = 2
+max_retries = 2
+exclude_all_private = true
+accept = [100, 200, 429]
+
+# Self-referential Pages URL: only resolves once GitHub Pages is deployed.
+exclude = ["^https://cbnu-gsel\\.github\\.io/handbook/"]
