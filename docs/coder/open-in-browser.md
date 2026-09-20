@@ -4,10 +4,14 @@ icon: lucide/globe
 
 # Open a workspace in the browser
 
-1. Sign in to Coder (see [GSEL sign-in](../onboarding/gsel-sign-in.md)).
+1. [Sign in to Coder](../onboarding/gsel-sign-in.md).
 2. Go to **Workspaces** and select your workspace.
-3. Select an available app on the workspace page to open it.
+3. Start it if stopped and wait for startup to complete.
+4. Select **Terminal** to open a workspace shell, or an available editor app.
 
-Every workspace includes a **Terminal** app, which opens a shell in the
-workspace directly in your browser. No local setup is required for browser
-access.
+Browser access needs no local Coder CLI or SSH setup. Commands in the
+workspace terminal run in your Coder workspace.
+
+Continue with [Pixi project setup](../projects/pixi.md) or
+[workspace tools](tools.md). Closing a browser tab does not stop the
+workspace; use its Coder page to stop it.

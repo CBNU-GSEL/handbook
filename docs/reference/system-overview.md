@@ -2,31 +2,23 @@
 icon: lucide/network
 ---
 
-# Public system overview
-
-GSEL research computing is built from a small set of components. This page
-describes their roles at a level safe to publish; it omits node names,
-network addresses, and other operational detail.
+# Research workflow
 
 ```mermaid
 graph LR
-  Researcher --> Coder
-  Coder --> Kubernetes
-  Kubernetes --> Storage["Shared research storage"]
+  Researcher --> Coder["Personal Coder workspace"]
+  Coder --> Gateway["gsel-compute Gateway"]
+  Gateway --> Run["Experiment run"]
+  Run --> Results["State, logs, and results"]
 ```
 
-## Components
+| Component | Researcher task |
+| --- | --- |
+| GSEL sign-in | Authenticate with your laboratory account. |
+| Coder | Edit code and use Pixi, Claude Code, or Codex through a browser, CLI, or desktop editor. |
+| `gsel-compute` Gateway | Submit a project experiment and request resources. |
+| Experiment run | Execute the submitted revision and check its state and outputs. |
 
-- **Researcher** — a GSEL member or approved collaborator, signed in through
-  the laboratory's Authentik identity (see [GSEL
-  sign-in](../onboarding/gsel-sign-in.md)).
-- **Coder** — provisions browser- and SSH-accessible development workspaces
-  for interactive work. See the [Coder](../coder/create-workspace.md) pages.
-- **Kubernetes** — the cluster orchestration platform that runs Coder
-  workspaces.
-- **Shared research storage** — read-only access to shared research
-  datasets from approved Coder workspaces, separate from your private
-  workspace storage.
-- **GSEL Compute** — a GSEL service for research computing workloads. Not
-  yet available for user access; use a Coder workspace for interactive work
-  in the meantime.
+Start with your [first workspace](../onboarding/first-workspace.md), then
+[prepare a project](../projects/pixi.md) and
+[submit an experiment](../compute/experiments.md).

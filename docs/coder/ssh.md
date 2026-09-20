@@ -2,43 +2,48 @@
 icon: lucide/plug
 ---
 
-# Connect with SSH
+# Connect with SSH and a desktop editor
 
-`coder config-ssh` configures your standard SSH client to reach your Coder
-workspaces. You can then use `ssh`, `scp`, or an editor's remote-SSH
-feature. Standard SSH clients connect through the generated `ProxyCommand`,
-which invokes your installed and authenticated Coder CLI.
+[Install the Coder CLI and sign in](cli.md) on your local computer.
+`coder config-ssh` configures your SSH client to reach your workspaces through
+the Coder CLI using `ProxyCommand`.
 
-## Prerequisites
+## Configure SSH
 
-Install the `coder` CLI and log in first; see [connect with the Coder
-CLI](cli.md).
-
-## Preview the change
+Preview the configuration change, then apply it:
 
 ```bash
 coder config-ssh --dry-run
-```
-
-This prints the SSH configuration entries `config-ssh` would add, without
-writing them.
-
-## Configure your SSH client
-
-```bash
 coder config-ssh
 ```
 
-By default, this adds a single wildcard host entry that covers all of your
-workspaces, including ones you create later — you do not need to rerun the
-command for each new workspace. Connect with a standard SSH client using the
-workspace host name, for example:
+The default wildcard entry covers your workspaces, including those created
+later. Connect using the workspace alias shown by Coder:
 
 ```bash
 ssh <workspace-host>
 ```
 
-Use `coder config-ssh --no-wildcard` to write a separate host entry per
-workspace instead. This suits SSH clients or tools that enumerate
-configured hosts rather than matching a wildcard pattern; rerun the command
-after creating a workspace to add its entry.
+Replace `<workspace-host>` with that alias. For editors that list individual
+SSH entries, generate one entry per workspace:
+
+```bash
+coder config-ssh --no-wildcard
+```
+
+Rerun that command after creating another workspace. See the
+[Coder SSH configuration reference](https://coder.com/docs/reference/cli/config-ssh)
+for options.
+
+## Open in a desktop editor
+
+1. Install [Remote - SSH for VS Code](https://code.visualstudio.com/docs/remote/ssh)
+   on your local computer.
+2. Run **Remote-SSH: Connect to Host** from the Command Palette and select or
+   enter the workspace alias.
+3. Open your project folder in the remote window.
+
+Keep the local Coder CLI installed and signed in. Terminals in the remote
+window run inside your workspace. Use the same
+[Pixi project](../projects/pixi.md) and [workspace tools](tools.md) as you
+would in the browser.

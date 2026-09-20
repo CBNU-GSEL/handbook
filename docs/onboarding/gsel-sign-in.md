@@ -4,17 +4,19 @@ icon: lucide/key-round
 
 # GSEL sign-in
 
-GSEL services share one identity: the laboratory's Authentik instance. Signing
-in to Coder or any other GSEL service uses this same account.
-
-Service URLs are not published here. Your onboarding contact sends them
-through the internal onboarding channel.
+GSEL services use your laboratory account through Authentik. Your onboarding
+contact provides access instructions and service addresses in the private
+member guide.
 
 ## Sign in
 
-1. Open the service URL your onboarding contact gave you.
+1. Open the Coder address from the member guide.
 2. Choose the Authentik sign-in option.
-3. Authenticate with the credentials your onboarding contact set up for you.
+3. Complete sign-in with your own GSEL account.
 
-If sign-in succeeds but a service reports missing permissions, contact your
-onboarding contact with the exact message shown.
+Gateway access uses the authentication steps in the member guide. A Coder
+browser session does not automatically sign in a terminal client.
+
+If a service reports missing access, contact your onboarding contact through
+the internal support channel. Include the service name and a redacted error
+message. Keep passwords and sign-in codes out of reports.

@@ -19,9 +19,17 @@ nav = [
       { "Open in the browser" = "coder/open-in-browser.md" },
       { "Connect with the CLI" = "coder/cli.md" },
       { "Connect with SSH" = "coder/ssh.md" },
+      { "Claude Code and Codex" = "coder/tools.md" },
+  ] },
+  { "Projects" = [
+      { "Pixi setup" = "projects/pixi.md" },
+  ] },
+  { "Compute" = [
+      { "Submit an experiment" = "compute/experiments.md" },
+      { "Compute-use rules" = "compute/rules.md" },
   ] },
   { "Reference" = [
-      { "System overview" = "reference/system-overview.md" },
+      { "Research workflow" = "reference/system-overview.md" },
       { "Glossary" = "reference/glossary.md" },
   ] },
 ]
