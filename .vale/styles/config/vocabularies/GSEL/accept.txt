@@ -1,11 +1,11 @@
 GSEL
 CBNU
 Zensical
-Pixi
-pixi
+[Pp]ixi
 lychee
 Gitleaks
 Vale
 [Oo]nboarding
 Authentik
 Coder
+[Rr]unbooks?

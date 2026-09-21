@@ -1,7 +1,7 @@
 [project]
 site_url = "https://cbnu-gsel.github.io/handbook/"
-site_name = "GSEL Handbook"
-site_description = "Public user documentation for GSEL research computing."
+site_name = "GSEL User Manual"
+site_description = "Researcher tasks and rules for GSEL research computing."
 
 repo_url = "https://github.com/CBNU-GSEL/handbook"
 repo_name = "CBNU-GSEL/handbook"
@@ -19,9 +19,17 @@ nav = [
       { "Open in the browser" = "coder/open-in-browser.md" },
       { "Connect with the CLI" = "coder/cli.md" },
       { "Connect with SSH" = "coder/ssh.md" },
+      { "Claude Code and Codex" = "coder/tools.md" },
+  ] },
+  { "Projects" = [
+      { "Pixi setup" = "projects/pixi.md" },
+  ] },
+  { "Compute" = [
+      { "Submit an experiment" = "compute/experiments.md" },
+      { "Compute-use rules" = "compute/rules.md" },
   ] },
   { "Reference" = [
-      { "System overview" = "reference/system-overview.md" },
+      { "Research workflow" = "reference/system-overview.md" },
       { "Glossary" = "reference/glossary.md" },
   ] },
 ]

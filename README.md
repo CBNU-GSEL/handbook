@@ -1,4 +1,4 @@
-# GSEL Handbook
+# GSEL User Manual
 
 Documentation site for the CBNU GSEL research group, built with
 [Zensical](https://zensical.org/) and managed locally with
