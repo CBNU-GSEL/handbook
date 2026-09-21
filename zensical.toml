@@ -19,6 +19,7 @@ nav = [
       { "Open in the browser" = "coder/open-in-browser.md" },
       { "Connect with the CLI" = "coder/cli.md" },
       { "Connect with SSH" = "coder/ssh.md" },
+      { "Submit a compute run" = "coder/submit-compute.md" },
   ] },
   { "Reference" = [
       { "System overview" = "reference/system-overview.md" },

@@ -16,3 +16,6 @@ sign-in](gsel-sign-in.md), create your first Coder workspace.
 For command-line or editor-integrated access instead of the browser, see
 [connect with the Coder CLI](../coder/cli.md) and [connect with
 SSH](../coder/ssh.md).
+
+After opening the workspace, [submit a compute run](../coder/submit-compute.md)
+from its terminal.
