@@ -9,7 +9,7 @@ graph LR
   Researcher --> Coder["Personal Coder workspace"]
   Coder --> Gateway["gsel-compute Gateway"]
   Gateway --> Run["Experiment run"]
-  Run --> Results["State, logs, and results"]
+  Run --> Status["Run status"]
 ```
 
 | Component | Researcher task |

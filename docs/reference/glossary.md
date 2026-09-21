@@ -4,9 +4,6 @@ icon: lucide/book-open
 
 # Glossary
 
-**Authentik**
-: The identity provider used for GSEL sign-in.
-
 **Coder workspace**
 : A personal development environment opened through a browser, the Coder
 CLI, or SSH.
@@ -20,7 +17,7 @@ template for research workspaces.
 A Pixi workspace is a project directory inside your Coder workspace.
 
 **`gsel-compute` Gateway**
-: The service for submitting experiments and checking run state and logs.
+: The service for submitting experiments and checking run status.
 
 **Project**
 : A registered research project with a repository and supported tasks.

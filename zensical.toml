@@ -1,7 +1,7 @@
 [project]
 site_url = "https://cbnu-gsel.github.io/handbook/"
-site_name = "GSEL Handbook"
-site_description = "Public user documentation for GSEL research computing."
+site_name = "GSEL User Manual"
+site_description = "Researcher tasks and rules for GSEL research computing."
 
 repo_url = "https://github.com/CBNU-GSEL/handbook"
 repo_name = "CBNU-GSEL/handbook"
