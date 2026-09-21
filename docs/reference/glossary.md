@@ -9,7 +9,7 @@ icon: lucide/book-open
 CLI, or SSH.
 
 **Template**
-: A predefined Coder workspace configuration. Use the approved **Scratch**
+: A predefined Coder workspace configuration. Use the approved **GSEL Workspace**
 template for research workspaces.
 
 **Pixi**

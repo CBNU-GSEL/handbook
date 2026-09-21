@@ -4,20 +4,21 @@ icon: lucide/box
 
 # Create a workspace
 
-Create a personal workspace from the approved **Scratch** template. Use it
+Create a personal workspace from the approved **GSEL Workspace** template. Use it
 for editing, dependency setup, and small local checks.
 
 ## From the browser
 
 1. [Sign in to Coder](../onboarding/gsel-sign-in.md).
-2. Go to **Templates** and select **Scratch**.
+2. Go to **Templates** and select **GSEL Workspace**.
 3. Select **Create Workspace**.
 4. Choose a workspace name, such as `research-dev`, and submit.
 5. Wait for startup to complete, then [open the workspace](open-in-browser.md).
 
 ## From the CLI
 
-[Install the Coder CLI and sign in](cli.md), then run:
+[Install the Coder CLI and sign in](cli.md), then use the template identifier
+`Scratch`:
 
 ```bash
 coder create research-dev --template Scratch
