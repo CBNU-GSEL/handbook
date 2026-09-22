@@ -19,12 +19,11 @@ user access.
 : The cluster orchestration platform underlying Coder.
 
 **Shared research storage**
-: Read-only access to shared research datasets from approved Coder
-workspaces.
+: Storage for research datasets. GSEL Workspace does not mount shared datasets.
 
 **Template**
-: A predefined workspace configuration in Coder. GSEL currently approves one
-template, **Scratch**, for research workspaces.
+: A predefined workspace configuration in Coder. The approved template is
+**GSEL Workspace** (`gsel-workspace`).
 
 **Workspace**
 : A Coder-provisioned development environment created from a template.
