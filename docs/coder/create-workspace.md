@@ -5,7 +5,7 @@ icon: lucide/box
 # Create a workspace
 
 Coder workspaces are built from templates. The approved template for GSEL
-workspaces is **GSEL Workspace** (CLI identifier `Scratch`).
+workspaces is **GSEL Workspace** (CLI identifier `gsel-workspace`).
 
 ## From the browser
 
@@ -17,8 +17,8 @@ workspaces is **GSEL Workspace** (CLI identifier `Scratch`).
 ## From the CLI
 
 ```bash
-coder create <workspace> --template Scratch
+coder create my-workspace --template gsel-workspace
 ```
 
-Replace `<workspace>` with a name for your workspace. The CLI prompts for any
+Replace `my-workspace` with a name for your workspace. The CLI prompts for any
 remaining template options.
