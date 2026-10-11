@@ -5,19 +5,35 @@ icon: lucide/play
 # Submit an experiment
 
 Develop and check code in your personal Coder workspace. Submit experiments
-to the **`gsel-compute` Gateway** for execution.
+to the **`gsel-compute` Gateway** for execution with the `gsel-compute`
+command, which the workspace provides.
 
 Use **Submit a Gateway CPU smoke run from Coder**, the private member guide
-in the infrastructure repository, for executable commands. It covers access,
-capabilities, a CPU smoke request, submission, status, cancellation, and retries.
-Ask your onboarding contact for access to that guide.
+in the infrastructure repository, for the access, cancellation, and retry
+procedures. Ask your onboarding contact for access to that guide.
+
+## Commands
+
+Run these commands in a workspace terminal. A command that needs Gateway
+access prompts you to approve a sign-in with your own GSEL account.
+
+| Command | Purpose |
+| --- | --- |
+| `gsel-compute capabilities` | Print the projects, tasks, and resource choices Gateway accepts. |
+| `gsel-compute submit REQUEST.json` | Submit a request file. Without a file, build the request by answering prompts from the Git checkout in the current directory. |
+| `gsel-compute status RUN_ID` | Print the run's state. |
+| `gsel-compute logs RUN_ID` | Print the run's state and its most recent log lines. |
+| `gsel-compute smoke --commit COMMIT` | Submit the CPU smoke run and verify its result. |
+
+An interactive submission refuses a checkout with uncommitted changes and does
+not snapshot them.
 
 ## Prepare the request
 
 1. [Set up the project with Pixi](../projects/pixi.md), run its local checks,
    and push the revision you want to execute.
-2. Inspect capabilities for available projects, tasks, resource choices,
-   and task parameters.
+2. Run `gsel-compute capabilities` to see available projects, tasks,
+   resource choices, and task parameters.
 3. Select your registered project and task. Record its repository URL and
    full Git commit ID.
 4. Fill in the experiment details and resource request below.
@@ -36,7 +52,7 @@ Ask your onboarding contact for access to that guide.
 
 Project and experiment names follow the
 [lowercase-dash naming rules](../projects/pixi.md#project-names). Write the
-summary so another researcher can understand the run's purpose.
+summary so another user can understand the run's purpose.
 
 ## Request resources
 
@@ -72,9 +88,10 @@ execute the experiment.
 
 ## Submit and check status
 
-1. Submit the prepared request using **Submit a Gateway CPU smoke run from Coder**.
-2. Save the returned run ID. Confirm that execution is enabled.
-3. Retrieve the run status with the guide's status command.
+1. Run `gsel-compute submit REQUEST.json` with the prepared request.
+2. Save the printed `request_key` and `run_id`.
+3. Run `gsel-compute status RUN_ID` until the run reaches a final state.
+   Use `gsel-compute logs RUN_ID` to read its recent output.
 4. Check the experiment's outputs after successful completion.
 
 | State | Next action |
@@ -88,9 +105,24 @@ execute the experiment.
 | `cancelled` | No further action is needed. |
 | `unknown`, `missing`, or `abandoned` | Contact support with the run ID before resubmitting. |
 
-Use the member guide's cancellation command to stop unwanted work.
+Use the member guide's cancellation procedure to stop unwanted work.
 For an expired sign-in or a submission error, follow its recovery instructions.
-Retain the request and any returned run ID while the outcome is uncertain.
+Retain the request key and any run ID while the outcome is uncertain, and do
+not resubmit with a new key.
+
+## Smoke checks
+
+Both smoke tasks belong to the `gsel-compute-demo` project.
+
+- **CPU smoke (`cpu_smoke`)** is accepted. A run from a Coder workspace at
+  source commit `e6caaaeb2011ee927669d6e90e6c59912cb66628` succeeded, and its
+  source, checksum, CPU quota, and memory limit matched the request. Run
+  `gsel-compute smoke --commit e6caaaeb2011ee927669d6e90e6c59912cb66628`
+  to repeat that check.
+- **GPU smoke (`gpu_smoke`)** is listed by Gateway and can be submitted with
+  `resources.gpu` set to `true` and a `resources.gpu_vram_gib` value. Its live
+  result is pending, so GPU execution is not yet verified. Do not plan work
+  that depends on a GPU until acceptance is reported.
 
 For help, send the run ID, time, and a redacted error through the internal
 support channel. Follow the [compute-use rules](rules.md).
