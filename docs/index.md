@@ -19,7 +19,7 @@ Read the [compute-use rules](compute/rules.md) before submitting work.
 
 | Document | Purpose |
 | --- | --- |
-| Handbook (GSEL User Manual) | Normal researcher tasks and rules. |
+| Handbook (GSEL User Manual) | Normal user tasks and rules. |
 | Member guide | Internal access and use information, including service addresses and server-specific guidance. |
 | Runbook | Operational procedures. |
 | Operator reference | Implementation and maintenance facts. |

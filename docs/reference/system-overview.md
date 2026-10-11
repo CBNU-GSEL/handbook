@@ -6,13 +6,13 @@ icon: lucide/network
 
 ```mermaid
 graph LR
-  Researcher --> Coder["Personal Coder workspace"]
+  User --> Coder["Personal Coder workspace"]
   Coder --> Gateway["gsel-compute Gateway"]
   Gateway --> Run["Experiment run"]
   Run --> Status["Run status"]
 ```
 
-| Component | Researcher task |
+| Component | User task |
 | --- | --- |
 | GSEL sign-in | Authenticate with your laboratory account. |
 | Coder | Edit code and use Pixi, Claude Code, or Codex through a browser, CLI, or desktop editor. |

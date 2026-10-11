@@ -5,7 +5,7 @@ icon: lucide/list-checks
 # Compute-use rules
 
 - Use your own GSEL account and personal workspace. Do not share sign-in
-  details or access another researcher's work without permission.
+  details or access another user's work without permission.
 - Use Coder for development and small local checks. Submit sustained CPU or
   GPU experiments through Gateway.
 - Request the CPU threads, RAM, and VRAM the workload needs. Keep program
