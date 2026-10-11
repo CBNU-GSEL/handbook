@@ -17,11 +17,11 @@ for editing, dependency setup, and small local checks.
 
 ## From the CLI
 
-[Install the Coder CLI and sign in](cli.md), then use the template identifier
-`Scratch`:
+[Install the Coder CLI and sign in](cli.md), then use the **GSEL Workspace**
+template identifier, `gsel-workspace`:
 
 ```bash
-coder create research-dev --template Scratch
+coder create research-dev --template gsel-workspace
 coder ssh research-dev
 ```
 
